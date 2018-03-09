@@ -3,7 +3,7 @@
   apt_repository:
     repo: "deb http://packages.cloud.google.com/apt {{ ansible_distribution_release }} main"
     state: present
-    file-name: google-cloud-sdk
+    filename: google-cloud-sdk
 
 - name: Import the APT key
   apt_key:
