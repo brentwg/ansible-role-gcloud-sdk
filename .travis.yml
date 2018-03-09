@@ -19,5 +19,8 @@ script:
   # Run tests
   - ${PWD}/tests/test.sh
 
+  # Print gcloud version
+  - docker exec --tty $container_id env TERM=xterm gcloud --version
+
 notifications:
   webhooks: https://galaxy.ansible.com/api/v1/notifications/
