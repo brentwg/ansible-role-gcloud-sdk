@@ -16,5 +16,10 @@
       - apt-transport-https
       when: ansible_os_family == 'Debian'
 
+    - name: Install test dependencies
+      package: 
+        name: curl 
+        state: present
+
   roles:
     - role_under_test
