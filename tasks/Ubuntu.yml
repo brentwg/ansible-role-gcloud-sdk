@@ -1,0 +1,12 @@
+---
+- name: Create APT repo file (Debian)
+  apt-repository:
+    repo: "deb http://packages.cloud.google.com/apt {{ ansible_distribution_release }} main"
+    state: present
+    file-name: google-cloud-sdk
+
+- name: Import the APT key
+  apt_key:
+    url: https://packages.cloud.google.com/apt/doc/apt-key.gpg
+    state: present
+
