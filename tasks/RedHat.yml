@@ -4,6 +4,6 @@
     name: "{{ yum_repo_name }}"
     description: "{{ yum_repo_description }}"
     baseurl: "{{ yum_repo_baseurl }}"
-    gpgkey: "{{ yum_repo_yum-key }} {{ yum_repo_rpm-package-key }}"
+    gpgkey: "{{ yum_repo_yum_key }} {{ yum_repo_rpm_package_key }}"
     gpgcheck: yes
     enabled: yes
