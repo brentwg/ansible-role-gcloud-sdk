@@ -11,5 +11,5 @@
 
 - name: Install the application package
   package:
-    name: google-cloud-sdk
+    name: "{{ gcloud_package_name }}"
     state: present

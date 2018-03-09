@@ -1,10 +1,9 @@
 ---
-- name: Add Cloud SDK repo.
+- name: Create the YUM repository (RedHat)
   yum_repository:
-    name: google-cloud-sdk
-    description: Cloud SDK repo
-    baseurl: https://packages.cloud.google.com/yum/repos/cloud-sdk-el7-x86_64
-    gpgkey: https://packages.cloud.google.com/yum/doc/yum-key.gpg https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg
+    name: "{{ yum_repo_name }}"
+    description: "{{ yum_repo_description }}"
+    baseurl: "{{ yum_repo_baseurl }}"
+    gpgkey: "{{ yum_repo_yum-key }} {{ yum_repo_rpm-package-key }}"
     gpgcheck: yes
     enabled: yes
-    

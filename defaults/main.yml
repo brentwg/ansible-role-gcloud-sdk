@@ -1,1 +1,8 @@
 ---
+gcloud_package_name: google-cloud-sdk
+
+yum_repo_name: "{{ gcloud_package_name }}"
+yum_repo_description: Google Cloud Platform SDK
+yum_repo_baseurl: https://packages.cloud.google.com/yum/repos/cloud-sdk-el7-x86_64
+yum_repo_yum-key: https://packages.cloud.google.com/yum/doc/yum-key.gpg
+yum_repo_rpm-package-key: https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg
