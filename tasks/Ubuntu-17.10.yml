@@ -1,0 +1,20 @@
+---
+- name: Create the APT repository (Ubuntu-17.10)
+  apt_repository:
+    repo: "deb http://packages.cloud.google.com/apt {{ apt_repo_distro }} main"
+    filename: "{{ gcloud_package_name }}"
+    state: present
+    
+- name: Import the APT repo key (Ubuntu-17.10)
+  apt_key:
+    keyserver: keyserver.ubuntu.com
+    id: 3746C208A7317B0F
+  environment:
+    CLOUD_SDK_REPO: "{{ apt_repo_distro }}"
+
+- name: Install the application package (Ubuntu-17.10)
+  apt:
+    name: "{{ gcloud_package_name }}"
+    update_cache: yes
+  environment:
+    CLOUD_SDK_REPO: "{{ apt_repo_distro }}"
