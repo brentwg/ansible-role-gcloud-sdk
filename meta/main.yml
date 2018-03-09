@@ -1,0 +1,26 @@
+---
+dependencies: []
+
+galaxy_info:
+  author: brentwg
+  description: This role installs the Google Cloud Platform SDK for Linux.
+  company: "None"
+  license: "None"
+  min_ansible_version: 2.4
+  platforms:
+  - name: EL
+    versions:
+      - 7
+  - name: Fedora
+    versions:
+      - 27
+  - name: Ubuntu
+    versions:
+      - xenial
+  galaxy_tags:
+    - google
+    - cloud
+    - platform
+    - software
+    - development
+    - kit
