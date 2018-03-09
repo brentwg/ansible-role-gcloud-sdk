@@ -9,7 +9,3 @@
       - "{{ ansible_os_family }}.yml"
       skip: true
 
-- name: Install the application package
-  package:
-    name: "{{ gcloud_package_name }}"
-    state: present

@@ -7,3 +7,8 @@
     gpgkey: "{{ yum_repo_yum_key }} {{ yum_repo_rpm_package_key }}"
     gpgcheck: yes
     enabled: yes
+
+- name: Install the application package (RedHat)
+  package:
+    name: "{{ gcloud_package_name }}"
+    state: present

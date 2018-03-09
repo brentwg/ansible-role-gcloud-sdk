@@ -6,3 +6,6 @@ yum_repo_description: Google Cloud Platform SDK
 yum_repo_baseurl: https://packages.cloud.google.com/yum/repos/cloud-sdk-el7-x86_64
 yum_repo_yum_key: https://packages.cloud.google.com/yum/doc/yum-key.gpg
 yum_repo_rpm_package_key: https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg
+
+apt_repo_distro: "cloud-sdk-{{ansible_distribution_release}}"
+apt_repo_key_url: https://packages.cloud.google.com/apt/doc/apt-key.gpg
