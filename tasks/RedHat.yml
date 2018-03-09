@@ -8,7 +8,3 @@
     gpgcheck: yes
     enabled: yes
     
-- name: Install google-cloud-sdk.
-  yum:
-    name: google-cloud-sdk
-    

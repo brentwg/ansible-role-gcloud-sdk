@@ -9,3 +9,7 @@
       - "{{ ansible_os_family }}.yml"
       skip: true
 
+- name: Install the application package
+  package:
+    name: google-cloud-sdk
+    state: present
