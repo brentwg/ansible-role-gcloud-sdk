@@ -1,15 +1,15 @@
 ---
-- name: Create the APT repository (Debian)
-  apt_repository:
-    repo: "deb http://packages.cloud.google.com/apt {{ apt_repo_distro }} main"
-    filename: "{{ gcloud_package_name }}"
-    state: present
-
 - name: Import the APT repo key (Debian)
   apt_key:
     url: "{{ apt_repo_key_url }}"
   environment:
     CLOUD_SDK_REPO: "{{ apt_repo_distro }}"
+
+- name: Create the APT repository (Debian)
+  apt_repository:
+    repo: "deb http://packages.cloud.google.com/apt {{ apt_repo_distro }} main"
+    filename: "{{ gcloud_package_name }}"
+    state: present
 
 - name: Install the application package (Debian)
   apt:
