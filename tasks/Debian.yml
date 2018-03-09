@@ -1,6 +1,6 @@
 ---
 - name: Create APT repo file (Debian)
-  apt-repository:
+  apt_repository:
     repo: "deb http://packages.cloud.google.com/apt {{ ansible_distribution_release }} main"
     state: present
     file-name: google-cloud-sdk
