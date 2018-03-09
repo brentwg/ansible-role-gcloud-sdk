@@ -6,8 +6,9 @@
     baseurl: https://packages.cloud.google.com/yum/repos/cloud-sdk-el7-x86_64
     gpgkey: https://packages.cloud.google.com/yum/doc/yum-key.gpg https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg
     gpgcheck: yes
+    enabled: yes
     
 - name: Install google-cloud-sdk.
   yum:
     name: google-cloud-sdk
-    enablerepo: google-cloud-sdk
+    
